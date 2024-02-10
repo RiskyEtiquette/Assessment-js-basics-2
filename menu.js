@@ -160,16 +160,26 @@ const foodArr = [
 */
 
 //CODE HERE
-const filterByTag = (foodItem) => {
-
-    const tagToFilter = 'burger';
-    
+const filterByTag = (foodItem, tagToFilter) => {
     return foodItem.tags.includes(tagToFilter);
 };
 
-const filteredFood = foodArr.filter(filterByTag);
-console.log(filteredFood);
+// Example array of food items
+const foodCheck = [
+    { name: 'Cheeseburger', tags: ['burger', 'cheese', 'fast food'] },
+    { name: 'Salad', tags: ['healthy', 'fresh', 'vegetarian'] },
+    { name: 'Pizza', tags: ['Italian', 'cheese', 'fast food'] }
+];
 
+// Function to filter food items by tag
+const filterFoodsByTag = (foodArr, tagToFilter) => {
+    return foodArr.filter(foodItem => filterByTag(foodItem, tagToFilter));
+};
+
+// Example usage
+const tagToFilter = 'fresh';
+const filteredFood = filterFoodsByTag(foodCheck, tagToFilter); // Corrected variable name
+console.log(filteredFood);
 
 //////////////////PROBLEM 5////////////////////
 /* 

@@ -58,10 +58,8 @@ class Ticket {
 */
 
 //CODE HERE
-// Create a new instance of the Ticket class
 const firstTicket = new Ticket(['pizza', 'bread', 'soda'], '7:03 PM', 575);
 
-// Output the created ticket
 console.log(firstTicket);
 
 
@@ -72,5 +70,4 @@ console.log(firstTicket);
 */
 
 //CODE HERE
-// Call the updateStatus method on firstTicket passing in the string 'cooking'
 firstTicket.updateStatus('cooking');
